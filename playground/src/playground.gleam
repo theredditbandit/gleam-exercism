@@ -1,0 +1,17 @@
+import gleam/dict.{from_list}
+import gleam/io
+
+pub fn main() {
+  io.println("Hello from playground!")
+  let roman =
+    from_list([
+      #("M", 1000),
+      #("D", 500),
+      #("C", 100),
+      #("L", 50),
+      #("X", 10),
+      #("V", 5),
+      #("I", 1),
+    ])
+  io.debug(dict.get(roman, "M"))
+}
